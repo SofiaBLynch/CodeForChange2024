@@ -38,10 +38,11 @@
   background-color: white;
 }
 
-.dropdown, .searchBar{
+.dropdown, .searchBar {
   position: relative;
-  flex:row wrap;
-  height:32px;
+  flex: row wrap;
+  padding-right: 10px;
+  height: 32px;
 }
 
 .dropdown-content {

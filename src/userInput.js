@@ -2,20 +2,23 @@ import React, { useState } from 'react';
 import './userInput.css';
 import data from './data/data.json'
 
-
 function UserInput() {
   const [searchTerm, setSearchTerm] = useState('');
   const [quantity, setQuantity] = useState('');
   const [unit, setUnit] = useState('tbsp'); // Default unit, can be changed as needed
-
+  const [itemList, setItemList] = useState([]);
 
   let newData = Object.keys(data);
+  let choice;
 
   function handleSearch(e) {
     setSearchTerm(e.target.value)
   }
 
-
+  function handleAdd() {
+    setItemList(itemList => [...itemList, choice])
+    console.log(itemList)
+  }
 
   return (
     <div className="User-app">
@@ -26,16 +29,24 @@ function UserInput() {
             placeholder="Search..."
             value={searchTerm}
             onChange={handleSearch}
+            id='userSearchValue'
           />
           <div className="dropdown">
             {newData.filter(item => {
               const termLower = searchTerm.toLowerCase();
-              const itemLower = item.substring(0, item.indexOf(',')).toLocaleLowerCase();
+              const itemLower = item.substring(0, item.indexOf(',')).toLowerCase();
 
-              return termLower && itemLower.includes(termLower);
+              return termLower && itemLower.startsWith(termLower)
+                && termLower !== itemLower
             }).slice(0, 5)
               .map((item) => (
-                <div className="dropdown-content">{item.substring(0, item.indexOf(','))}</div>
+                <div className="dropdown-content"
+                  onClick={() => {
+                    setSearchTerm(item.substring(0, item.indexOf(',')))
+                    choice = item;
+                  }}>
+                  {item.substring(0, item.indexOf(','))}
+                </div>
               ))}
           </div>
         </div>
@@ -59,10 +70,7 @@ function UserInput() {
           {/* Add more units as needed */}
         </select>
 
-        <button onClick={() => {
-          console.log('Search Term:', searchTerm, 'Quantity:', quantity, 'Unit:', unit);
-          // Implement your search and handling logic here.
-        }}>Search</button>
+        <button onClick={handleAdd}>Add</button>
       </div>
     </div>
   );

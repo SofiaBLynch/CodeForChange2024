@@ -7,7 +7,7 @@ function UserInput() {
   const [unit, setUnit] = useState('tbsp'); // Default unit, can be changed as needed
 
   return (
-    <div className="App">
+    <div className="User-app">
       <div className='userInput'>
         <input
           type="text"

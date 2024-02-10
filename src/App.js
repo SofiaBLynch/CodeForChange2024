@@ -5,7 +5,7 @@ function App() {
     <div class="App">
       <div class='App-header'>
         <h1>Grocery Guru</h1>
-        <p>Learn how to financially plan for groceries. Input the ingredients you need for your reciepe and find out the cost to make the meal</p>
+        <p>Learn how to financially plan for groceries. Input the ingredients you need for your recipe and find out the cost to make the meal</p>
       </div>
   
     </div>

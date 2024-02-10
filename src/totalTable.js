@@ -5,7 +5,7 @@ function TotalTable() {
       <div class='outputTable'>
         <table id='totalTable'>
             <tr>
-                <td>Total to Make Reciepe:</td>
+                <td>Total to Make Recipe:</td>
                 <td id='totalCost'>$_____</td>
                 <td><button class='trashcan'>ClearTable</button></td>
             </tr>

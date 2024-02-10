@@ -1,0 +1,27 @@
+.userInput {
+  background-color: #B4CDED;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex; /* Align items in a row */
+  justify-content: center; /* Center items horizontally */
+  gap: 20px; /* Space between items */
+}
+
+.userInput input, .userInput select, .userInput button {
+  padding: 15px; /* Increase the padding for larger appearance */
+  font-size: 18px; /* Increase the font size */
+  min-width: 200px; /* Increase the minimum width */
+  border: 2px solid #A3C4DC; /* Border for inputs and button */
+  border-radius: 5px; /* Rounded corners */
+}
+
+.userInput button {
+  cursor: pointer; /* Pointer on hover */
+  background-color: #D1E3F8; /* Button background color */
+  border-color: #A3C4DC; /* Button border color */
+}
+
+.userInput input:focus, .userInput select:focus, .userInput button:focus {
+  outline: none; /* No focus outline */
+  border-color: #7A9BC6; /* Focus border color */
+}

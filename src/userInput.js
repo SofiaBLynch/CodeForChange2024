@@ -38,10 +38,10 @@ function UserInput() {
           {/* Add more units as needed */}
         </select>
 
-        <button onClick={() => {
+        <button id='addButton' onClick={() => {
           console.log('Search Term:', searchTerm, 'Quantity:', quantity, 'Unit:', unit);
           // Implement your search and handling logic here.
-        }}>Search</button>
+        }}>Add</button>
       </div>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './userInput.css';
 import data from './data/data.json'
 
+
 function UserInput() {
   const [searchTerm, setSearchTerm] = useState('');
   const [quantity, setQuantity] = useState('');
@@ -19,6 +20,7 @@ function UserInput() {
   return (
     <div className="User-app">
       <div className='userInput'>
+
         <input
           type="text"
           placeholder="Search..."
@@ -31,11 +33,13 @@ function UserInput() {
             const itemLower = item.toLocaleLowerCase();
 
             return termLower && itemLower.includes(termLower);
-          }).map((item) => (
-            <div className="dropdown-row">{item}</div>
+          }).slice(0,5)
+          .map((item) => (
+            <div className="dropdown-content">{item.substring(0, item.indexOf(','))}</div>
           ))}
+          </div>
 
-        </div>
+        
 
         <input
           type="number"

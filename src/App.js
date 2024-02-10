@@ -21,7 +21,7 @@ function App() {
         style={{ width: '240px' }} // Half of 480px
       />
 
-      {/* Button */}
+      {/* Buttons */}
       <button>Click Me!!</button>
     </div>
   );

@@ -5,6 +5,7 @@ import App from './App';
 import UserInput from './userInput';
 import OutputTable from './outputTable'
 import Copyright from './copyright'
+import TotalTable from './totalTable'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -12,6 +13,7 @@ root.render(
     <App />
     <UserInput />
     <OutputTable />
+    <TotalTable />
     <Copyright />
   </React.StrictMode>
 );

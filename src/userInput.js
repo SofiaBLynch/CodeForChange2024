@@ -1,10 +1,20 @@
 import React, { useState } from 'react';
 import './userInput.css';
+import data from './data/data.json'
 
 function UserInput() {
   const [searchTerm, setSearchTerm] = useState('');
   const [quantity, setQuantity] = useState('');
   const [unit, setUnit] = useState('tbsp'); // Default unit, can be changed as needed
+
+
+  let newData = Object.keys(data);
+
+  function handleSearch(e) {
+    setSearchTerm(e.target.value)
+  }
+
+
 
   return (
     <div className="User-app">
@@ -13,8 +23,19 @@ function UserInput() {
           type="text"
           placeholder="Search..."
           value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
+          onChange={handleSearch}
         />
+        <div className="dropdown">
+          {newData.filter(item => {
+            const termLower = searchTerm.toLowerCase();
+            const itemLower = item.toLocaleLowerCase();
+
+            return termLower && itemLower.includes(termLower);
+          }).map((item) => (
+            <div className="dropdown-row">{item}</div>
+          ))}
+
+        </div>
 
         <input
           type="number"

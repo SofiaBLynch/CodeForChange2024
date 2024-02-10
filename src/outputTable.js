@@ -13,10 +13,10 @@ function OutputTable() {
                 <th>Remove:</th>
             </tr>
             <tr>
-                <td>Ingredient:</td>
-                <td>Quantity:</td>
-                <td>Cost for Recipe:</td>
-                <td>Cost for Whole Item:</td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
                 <td><button class='trashcan'>Remove</button></td>
             </tr>
             

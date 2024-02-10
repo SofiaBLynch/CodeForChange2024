@@ -7,8 +7,11 @@ function UserInput() {
   const [unit, setUnit] = useState('tbsp'); // Default unit, can be changed as needed
 
   return (
-    <div className="User-app">
+    <div className="App">
+      <p id='userInputError'></p>
+      
       <div className='userInput'>
+        <h3> Input Ingredient</h3>
         <input
           type="text"
           placeholder="Search..."
@@ -25,6 +28,7 @@ function UserInput() {
 
         <select value={unit} onChange={(e) => setUnit(e.target.value)}>
           <option value="tbsp">Tablespoon (tbsp)</option>
+          <option value="tsp">Teaspoon (tsp)</option>
           <option value="cup">Cup (cup)</option>
           <option value="oz">Ounce (oz)</option>
           <option value="ml">Milliliter (ml)</option>

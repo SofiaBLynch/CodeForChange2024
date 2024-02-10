@@ -6,25 +6,23 @@
   justify-content: center; /* Center items horizontally */
   gap: 20px; /* Space between items */
 }
-
+h3 
+{
+  font-family: 'Gravitas One';
+}
 .userInput input, .userInput select, .userInput button {
   display:flex;
   flex-flow:column wrap;
   align-content: center;
   width: 65%;
   max-width:800px;
-  margin:auto;
   border-radius: 10px;
   padding:20px;
-  margin-bottom: 20px;
   font-size: 1rem;
   border-radius: 10px; /* Rounded corners */
   background-color: #D1E3F8;
 }
-.User-app
-{
-  width: 100%;
-}
+
 .userInput button {
   cursor: pointer; /* Pointer on hover */
   background-color: #D1E3F8; /* Button background color */

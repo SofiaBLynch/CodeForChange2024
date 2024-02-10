@@ -1,3 +1,16 @@
+
+.userInput button {
+  cursor: url('/src/IMG/club-royale-final-ezgif.com-resize (2).gif'), auto; /* Custom cursor for buttons */
+  background-color: #D1E3F8; /* Button background color */
+  border-color: #A3C4DC; /* Button border color */
+}
+
+
+.userInput input:focus, .userInput select:focus, .userInput button:focus {
+  outline: none; /* No focus outline */
+  border-color: #7A9BC6; /* Focus border color */
+}
+
 .userInput {
   background-color: #B4CDED;
   padding: 20px;

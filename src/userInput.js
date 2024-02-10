@@ -8,36 +8,39 @@ function UserInput() {
 
   return (
     <div className="App">
-      <div className='userInput'>
-        <input
-          type="text"
-          placeholder="Search..."
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-        />
+      <div className="header">
+        <div className='userInput'>
+          <input
+            type="text"
+            placeholder="Search..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
 
-        <input
-          type="number"
-          placeholder="Quantity"
-          value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
-        />
+          <input
+            type="number"
+            placeholder="Quantity"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+          />
 
-        <select value={unit} onChange={(e) => setUnit(e.target.value)}>
-          <option value="tbsp">Tablespoon (tbsp)</option>
-          <option value="cup">Cup (cup)</option>
-          <option value="oz">Ounce (oz)</option>
-          <option value="ml">Milliliter (ml)</option>
-          <option value="l">Liter (l)</option>
-          <option value="g">Gram (g)</option>
-          <option value="kg">Kilogram (kg)</option>
-          {/* Add more units as needed */}
-        </select>
+          <select value={unit} onChange={(e) => setUnit(e.target.value)}>
+            <option value="tbsp">Tablespoon (tbsp)</option>
+            <option value="cup">Cup (cup)</option>
+            <option value="oz">Ounce (oz)</option>
+            <option value="ml">Milliliter (ml)</option>
+            <option value="l">Liter (l)</option>
+            <option value="g">Gram (g)</option>
+            <option value="kg">Kilogram (kg)</option>
+            {/* Add more units as needed */}
+          </select>
 
-        <button onClick={() => {
-          console.log('Search Term:', searchTerm, 'Quantity:', quantity, 'Unit:', unit);
-          // Implement your search and handling logic here.
-        }}>Search</button>
+          <button onClick={() => {
+            console.log('Search Term:', searchTerm, 'Quantity:', quantity, 'Unit:', unit);
+            // Implement your search and handling logic here.
+          }}>Search</button>
+        </div>
+        
       </div>
     </div>
   );

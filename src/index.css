@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #344966;
-
+  cursor: url('./IMG/club-royale-final-ezgif.com-resize (2).gif'), auto; /* Custom cursor for the whole page */
 }
 
 code {

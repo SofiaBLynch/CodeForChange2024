@@ -51,7 +51,8 @@
   padding: 12px 16px;
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown-content:hover {
   display: block;
+  background-color: #cccccc;
 }
 

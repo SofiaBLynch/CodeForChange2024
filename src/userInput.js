@@ -30,16 +30,16 @@ function UserInput() {
           <div className="dropdown">
             {newData.filter(item => {
               const termLower = searchTerm.toLowerCase();
-              const itemLower = item.toLocaleLowerCase();
+              const itemLower = item.substring(0, item.indexOf(',')).toLocaleLowerCase();
 
               return termLower && itemLower.includes(termLower);
-            }).slice(0,5)
-            .map((item) => (
-              <div className="dropdown-content">{item.substring(0, item.indexOf(','))}</div>
-            ))}
-            </div>
-      </div>
-        
+            }).slice(0, 5)
+              .map((item) => (
+                <div className="dropdown-content">{item.substring(0, item.indexOf(','))}</div>
+              ))}
+          </div>
+        </div>
+
 
         <input
           type="number"

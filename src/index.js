@@ -6,11 +6,13 @@ import UserInput from './userInput';
 import OutputTable from './outputTable'
 import Copyright from './copyright'
 import TotalTable from './totalTable'
+import UserBudget from './userBudget'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
+    <UserBudget />
     <UserInput />
     <OutputTable />
     <TotalTable />

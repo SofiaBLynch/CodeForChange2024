@@ -41,6 +41,7 @@
 .dropdown, .searchBar{
   position: relative;
   flex:row wrap;
+  height:32px;
 }
 
 .dropdown-content {

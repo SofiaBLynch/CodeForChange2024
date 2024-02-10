@@ -3,10 +3,10 @@ function TotalTable() {
   return (
     <div class="App">
       <div class='outputTable'>
-        <table id='ingredientTable'>
+        <table id='totalTable'>
             <tr>
                 <td>Total to Make Reciepe:</td>
-                <td>$_____</td>
+                <td id='totalCost'>$_____</td>
                 <td><button class='trashcan'>ClearTable</button></td>
             </tr>
             

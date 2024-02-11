@@ -29,7 +29,7 @@ function UserInput() {
                  <td>$${retailPrice}</td>  <!-- Displaying the retail price here -->
                </tr>`;
       document.getElementById('ingredientTable').innerHTML += table;
-      document.getElementById('totalCost').innerText = total.toFixed(2);
+      document.getElementById('totalCost').innerText = '$' + total.toFixed(2).toString();
     } else {
       return;
     }
@@ -87,7 +87,7 @@ function UserInput() {
           <tbody>
             <tr>
               <td>Total to Make Recipe:</td>
-              <td id='totalCost'>$</td>
+              <td id='totalCost'>$___</td>
             </tr>
           </tbody>
         </table>

@@ -6,7 +6,38 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #344966;
+  cursor: url('IMG/frame_000_delay-0.03s.gif'), auto; 
+  animation: cursor 1s linear infinite;
+}
 
+@keyframes cursor{
+  0% {
+    cursor: url('IMG/frame_000_delay-0.03s.gif'), auto;
+  }
+  12% {
+    cursor: url('IMG/frame_020_delay-0.03s.gif'), auto;
+  }
+  24% {
+    cursor: url('IMG/frame_040_delay-0.03s.gif'), auto;
+  }
+  36% {
+    cursor: url('IMG/frame_060_delay-0.03s.gif'), auto;
+  }
+  48% {
+    cursor: url('IMG/frame_080_delay-0.03s.gif'), auto;
+  }
+  60% {
+    cursor: url('IMG/frame_100_delay-0.03s.gif'), auto;
+  }
+  72% {
+    cursor: url('IMG/frame_120_delay-0.03s.gif'), auto;
+  }
+  84% {
+    cursor: url('IMG/frame_140_delay-0.03s.gif'), auto;
+  }
+  100% {
+    cursor: url('IMG/frame_160_delay-0.03s.gif'), auto;
+  }
 }
 
 code {

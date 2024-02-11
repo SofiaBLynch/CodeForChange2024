@@ -8,20 +8,89 @@
 }
 
 .userInput input, .userInput select, .userInput button {
-  padding: 15px; /* Increase the padding for larger appearance */
-  font-size: 18px; /* Increase the font size */
-  min-width: 200px; /* Increase the minimum width */
-  border: 2px solid #A3C4DC; /* Border for inputs and button */
-  border-radius: 5px; /* Rounded corners */
+  display:flex;
+  flex-flow:column wrap;
+  align-content: center;
+  width: 65%;
+  max-width:800px;
+  margin:auto;
+  border-radius: 10px;
+  padding:20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+  border-radius: 10px; /* Rounded corners */
+  background-color: #D1E3F8;
 }
-
+.User-app
+{
+  width: 100%;
+}
 .userInput button {
   cursor: pointer; /* Pointer on hover */
   background-color: #D1E3F8; /* Button background color */
   border-color: #A3C4DC; /* Button border color */
+  ;
 }
 
 .userInput input:focus, .userInput select:focus, .userInput button:focus {
   outline: none; /* No focus outline */
   border-color: #7A9BC6; /* Focus border color */
+  background-color: white;
+}
+
+.dropdown, .searchBar {
+  position: relative;
+  flex: row wrap;
+  padding-right: 10px;
+  height: 32px;
+}
+
+.dropdown-content {
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+
+.dropdown-content:hover {
+  display: block;
+  background-color: #cccccc;
+}
+
+.outputTable 
+{
+  background-color:#B4CDED;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+  margin-bottom:10px;
+  font-family: 'Gravitas One';
+  padding-bottom: 20px;
+}
+
+table, th, td
+{
+    border: 2px solid black;
+    padding: 3px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+.trashcan
+{
+    border-radius: 5px;
+    border: 3px solid #305b94;
+    font-family: 'Times New Roman';
+}
+.trashcan:hover
+{
+    background-color: #84b2ed;
+}
+
+.trashcan:active
+{
+    border-color: darkred;
+    background-color: red;
 }

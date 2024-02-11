@@ -3,17 +3,16 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import UserInput from './userInput';
-import OutputTable from './outputTable'
-import Copyright from './copyright'
-import TotalTable from './totalTable'
+import Copyright from './copyright';
+
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     <App />
     <UserInput />
-    <OutputTable />
-    <TotalTable />
     <Copyright />
   </React.StrictMode>
 );

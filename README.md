@@ -1,3 +1,6 @@
+# GROCERY GURU
+Calculate the costs of recipes!
+Search through the list of ingredients and add them to a table for your calculating needs.
 
 ## Starting File
 In the project directory, you can run:

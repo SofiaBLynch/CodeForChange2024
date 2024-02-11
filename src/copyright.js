@@ -2,8 +2,8 @@ import './copyright.css';
 
 function Copyright() {
   return (
-    <div class="App">
-      <div class='copyright'>
+    <div className="App">
+      <div className='copyright'>
         <p id='copyright-statement'>&#174; 2024 Grocery Guru</p>
       </div>
     </div>

@@ -15,15 +15,27 @@ function UserInput() {
     setSearchTerm(e.target.value)
   }
 
-  function handleAdd() {
-    setItemList(itemList => [...itemList, choice])
-    console.log(itemList)
+ 
+  function addRow() {
+    console.log('being called');
+    var searchVal = document.getElementById('userSearchValue').value;
+    var quantityVal = document.getElementById('userQuantity').value;
+    var unitVal = document.getElementById('userUnit').value;
+    var table;
+    if(searchVal != null && quantityVal != null && unitVal != null)
+    {
+      table = "<tr><td>" + searchVal + "</td><td>"+quantityVal + unitVal + "</td></tr>";
+      document.getElementById('ingredientTable').innerHTML += table;
+      newData.find(searchVal)
+    } else {
+      return;
+    }
   }
 
   return (
     <div className="User-app">
       <div className='userInput'>
-        <div class='searchBar'>
+        <div className='searchBar'>
           <input
             type="text"
             placeholder="Search..."
@@ -55,11 +67,13 @@ function UserInput() {
         <input
           type="number"
           placeholder="Quantity"
+          id='userQuantity'
           value={quantity}
           onChange={(e) => setQuantity(e.target.value)}
+
         />
 
-        <select value={unit} onChange={(e) => setUnit(e.target.value)}>
+        <select id = 'userUnit' value={unit} onChange={(e) => setUnit(e.target.value)}>
           <option value="tbsp">Tablespoon (tbsp)</option>
           <option value="cup">Cup (cup)</option>
           <option value="oz">Ounce (oz)</option>
@@ -70,7 +84,35 @@ function UserInput() {
           {/* Add more units as needed */}
         </select>
 
-        <button onClick={handleAdd}>Add</button>
+        <button type='button' onClick={addRow}>Add</button>
+      </div>
+      <div className='outputTable'>
+        <h3> Recipe Costs</h3>
+        <table >
+          <thead>
+            <tr>
+                <th>Ingredient:</th>
+                <th>Quantity:</th>
+                <th>Cost for Recipe:</th>
+                <th>Cost for Whole Item:</th>
+                <th>Remove:</th>
+            </tr>
+          </thead>
+          <tbody id='ingredientTable'>
+
+          </tbody>
+        </table>
+      </div>
+      <div className='outputTable'>
+        <table id='totalTable'>
+          <tbody>
+            <tr>
+                <td>Total to Make Recipe:</td>
+                <td id='totalCost'>$_____</td>
+                <td><button className='trashcan'>ClearTable</button></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   );
